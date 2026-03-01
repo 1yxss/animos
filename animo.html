@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Un mensaje para ti 💙</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #fedbfe, #ffeefe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        .card {
+            background: white;
+            width: 440px;
+            padding: 40px 30px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            text-align: center;
+            animation: aparecer 1.2s ease;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        h1 {
+            font-size: 22px;
+            color: #eb30a9;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #513748;
+            line-height: 1.6;
+            white-space: pre-line;
+            min-height: 80px;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            background-color: #3b82f6;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #3b82f6;
+        }
+
+        footer {
+            margin-top: 25px;
+            font-size: 13px;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>💌 Un mensaje para ti</h1>
+    <p id="mensaje"></p>
+    <button onclick="nuevoMensaje()">Leer otro mensaje</button>
+    <footer>Alguien cree en ti 💙</footer>
+</div>
+
+<script>
+    const mensajes = [
+        "Oye, no estás sola.\nAlguien cree mucho en ti 💙",
+        "Todo paso a paso sigue siendo avanzar 🌱",
+        "Respira… lo estás haciendo mejor de lo que crees 🤍",
+        "Hoy no tienes que ser fuerte.\nSolo tienes que ser tú",
+        "Incluso en los días difíciles,\nsigues siendo valiosa ✨",
+        "No todo tiene que estar resuelto hoy",
+        "Tu esfuerzo importa, aunque no lo veas todavía",
+        "No estás fallando, estás creciendo 🌿",
+        "Descansar también es progreso",
+        "Lo que sientes es válido",
+        "Aun en silencio, importas 💙",
+        "Este momento no es para siempre 🌅",
+        "La calma vuelve, siempre vuelve",
+        "No tienes que demostrar nada para valer",
+        "Un paso pequeño hoy puede cambiar mucho mañana",
+        "Tu luz no se apaga, solo descansa ✨",
+        "Eres más fuerte de lo que imaginas",
+        "Está bien no poder con todo hoy",
+        "Hoy cuenta, incluso si solo sobreviviste",
+        "Hay una versión tuya que ya superó esto 💫",
+        "Todavía vienen días más ligeros",
+        "Puedes ir despacio, no pasa nada 🤍",
+        "El mundo es mejor porque estás en él",
+        "No estás sola en esto, de verdad",
+        "Sigue, incluso si hoy es difícil",
+        "Todo lo que eres, ya es suficiente",
+        "Las cosas pueden mejorar, incluso cuando no lo parece",
+        "Mereces paz, no presión",
+        "Lo estás intentando, y eso vale mucho",
+        "Cada día que sigues es una victoria 💙",
+        "No olvides esto:\nimportas más de lo que imaginas",
+        "Incluso cansada, sigues avanzando",
+        "Eres hogar incluso para ti misma",
+        "No pasa nada si hoy no puedes con todo",
+        "Mañana también es una oportunidad",
+        "Tu presencia ya hace diferencia"
+    ];
+
+    function nuevoMensaje() {
+        const indice = Math.floor(Math.random() * mensajes.length);
+        document.getElementById("mensaje").textContent = mensajes[indice];
+    }
+
+    // Mostrar mensaje al abrir
+    nuevoMensaje();
+</script>
+
+</body>
+</html>
